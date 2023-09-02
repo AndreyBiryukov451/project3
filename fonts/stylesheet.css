@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'e-Ukraine';
+    src: local('e-Ukraine-Bold'), local('e-Ukraine-Bold'),
+        url('e-Ukraine-Bold.woff2') format('woff2'),
+        url('e-Ukraine-Bold.woff') format('woff'),
+        url('e-Ukraine-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: bold;
+    }

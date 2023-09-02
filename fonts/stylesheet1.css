@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'e-Ukraine';
+    src: local('e-Ukraine-Regular'), local('e-Ukraine-Regular'),
+        url('e-Ukraine-Regular.woff2') format('woff2'),
+        url('e-Ukraine-Regular.woff') format('woff'),
+        url('e-Ukraine-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    }
