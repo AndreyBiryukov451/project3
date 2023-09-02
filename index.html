@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/fonts/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="/fonts/stylesheet1.css" type="text/css">
+    <link rel="stylesheet" href="/fonts/sylesheet2.css" type="text/css">
+    <title>Progect3</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrp_left">
+            <button class="button__menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <h1>Auctions listing</h1>
+        </div>
+        <div class="header__wrp_right">
+            <img class="header__img" src="./img/header_img.svg" alt="">
+            <div class="lenguage">
+                <button class="btn__leng ">
+                    <img src="./img/eng-flag.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="left-block">
+        <form action="#">
+            <input class="search" placeholder="Search" type="search">
+            <div class="select-marg">
+                <p class="select__title">Auction type</p>
+                <div class="select_wrp">
+                    <select class="select" name="select-language">
+                        <option value="1">All types</option>
+                        <option selected value="2">English</option>
+                        <option value="3">Dutch</option>
+                        <option value="4">Priority English</option>
+                        <option value="5">Multiawards</option>
+                    </select>
+                </div>
+            </div>
+            <div class="select-marg">
+                <p class="select__title">Procedure type</p>
+                <div class="select_wrp">
+                    <select class="select" name="select-type">
+                        <option value="1">All types</option>
+                        <option value="2">English</option>
+                        <option value="3">Dutch</option>
+                        <option value="4">Priority English</option>
+                        <option value="5">Multiawards</option>
+                    </select>
+                </div>
+            </div>
+            <div class="select-marg">
+                <p class="select__title">Status</p>
+                <div class="select_wrp">
+                    <select class="select" name="select-status">
+                        <option value="1">All statuses</option>
+                        <option value="2">Planned</option>
+                        <option value="3">Ongoing</option>
+                        <option value="4">Finished</option>
+                    </select>
+                </div>
+            </div>
+            <div class="select-interval select-marg">
+                <p>Starting date</p>
+                <div class="select__up"></div>
+                    <input class="select select_pad" type="date">
+                </div>
+                <div class="select__down">
+                    <input class="select select_pad" type="date">
+                </div>
+            </div>
+            <div class="select-interval select-marg">
+                <p>Starting price, <span>UAH</span></p>
+                <div class="select__up">
+                    <input placeholder="0.00" class="select interval select_pad" type="number">
+                </div>
+                <div class="select__down">
+                    <input placeholder="0.00" class="select interval select_pad" type="number">
+                </div>
+            </div>
+            <p class="hide">Hide filters</p>
+            <button class="apply">apply</button>
+            <div class="reset_wrp">
+            <button class="reset" type="reset">Reset all</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
