@@ -5,10 +5,10 @@
     flex-direction: column;
     border-radius: 16px;
     background: $new-bg-light-grey;
-    margin: 10px;
+    margin: 58px 10px 10px 10px;
 }
 
-.search{
+.search {
     appearance: none;
     outline: none;
     width: 100%;
@@ -85,7 +85,8 @@
 
 .select_wrp {
     position: relative;
-    &::after {
+
+    &:after {
         content: url("../img/arrow down.svg");
         position: absolute;
         top: 12px;
@@ -99,7 +100,8 @@
 .select__up {
     margin-bottom: 12px;
     position: relative;
-    &::before {
+
+    &:before {
         content: "from";
         position: absolute;
         left: 16px;
@@ -120,7 +122,8 @@
 .select__down {
     position: relative;
     margin-bottom: 20px;
-    &::before {
+
+    &:before {
         content: "to";
         position: absolute;
         left: 16px;
@@ -135,6 +138,7 @@
 }
 
 .select-interval {
+
     p {
         text-align: center;
         color: #333;
@@ -144,6 +148,7 @@
         font-weight: 400;
         line-height: 20px; /* 153.846% */
         margin-bottom: 12px;
+
         span {
             color: #340073;
             font-family: e-Ukraine;
@@ -168,21 +173,54 @@
     }
 }
 
-.hide {
-    color:#340073;
+.filter {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+.filter__btn {
+    border: none;
+    background-color: transparent;
+    color: #340073;
     font-family: e-Ukraine;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 142.857% */
     text-decoration-line: underline;
-    text-align: end;
-    margin-bottom: 22px;
+}
 
-    &::after {
+.filter__btn__hide {
+    display: flex;
+    align-items:center;
+
+    &:after {
         content: url("../img/arow-up-blue.svg");
         margin-left: 6px;
     }
+}
+
+.filter__btn__hide.active {
+    display: none;
+}
+
+.hide-space.active {
+    display: none;
+}
+
+.filter__btn__show {
+    display: none;
+    align-items:center;
+
+    &:after {
+        content: url("../img/arrow-down-blue.svg");
+        margin-left: 6px;
+    }
+}
+
+.filter__btn__show.active {
+    display: flex;
 }
 
 .apply{
@@ -225,7 +263,7 @@
     }
 }
 
-.reset_wrp{
+.reset-wrp {
     display: flex;
     justify-content: center;
 }
@@ -245,7 +283,7 @@
     line-height: 16px; /* 114.286% */
     text-transform: uppercase;
 
-    &::before {
+    &:before {
         content: url("../img/reset.svg");
     }
 

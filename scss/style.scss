@@ -2,4 +2,10 @@
 @import "mixins";
 @import "header";
 @import "reset";
-@import "left-block"
+@import "left-block";
+@import "simulator";
+@import "right-block";
+
+body {
+    background-image: linear-gradient(140deg, #340073 -0.39%, #422504 100.04%);
+}
