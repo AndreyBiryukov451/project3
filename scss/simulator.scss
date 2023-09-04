@@ -1,0 +1,45 @@
+.simulator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 192px 15px;
+    margin: 10px;
+    border-radius: 16px;
+    background: #F9F8FA;
+    position: fixed;
+    top: -100%;
+    transition: all 0.5s;
+
+    .simulator__title {
+        color: var(--new-text-black, #333);
+        text-align: center;
+        font-family: e-Ukraine;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px; /* 166.667% */
+        margin-bottom: 20px;
+
+    }
+    .blue__button {
+        display: flex;
+        padding: 16px 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-radius: 30px;
+        border: 2px solid #6900EA;
+        background-color: transparent;
+        color: #6900EA;
+        font-family: e-Ukraine;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px; /* 114.286% */
+        text-transform: uppercase;
+    }
+}
+
+.simulator.active {
+    top: 48px;
+}
