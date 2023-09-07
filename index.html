@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/fonts/stylesheet.css" type="text/css">
     <link rel="stylesheet" href="/fonts/stylesheet1.css" type="text/css">
     <link rel="stylesheet" href="/fonts/sylesheet2.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Progect3</title>
 </head>
 <body>
@@ -14,10 +15,8 @@
         <div class="header__wrp_left">
             <button class="button__menu">
                 <span></span>
-                <span></span>
-                <span></span>
             </button>
-            <h1>Auctions listing</h1>
+            <h1 class="header__title">Auctions listing</h1>
         </div>
         <div class="header__wrp_right">
             <img class="header__img" src="./img/header_img.svg" alt="">
@@ -28,68 +27,204 @@
             </div>
         </div>
     </header>
-    <section class="left-block">
-        <form action="#">
-            <input class="search" placeholder="Search" type="search">
-            <div class="select-marg">
-                <p class="select__title">Auction type</p>
-                <div class="select_wrp">
-                    <select class="select" name="select-language">
-                        <option value="1">All types</option>
-                        <option selected value="2">English</option>
-                        <option value="3">Dutch</option>
-                        <option value="4">Priority English</option>
-                        <option value="5">Multiawards</option>
+    <div class="main__wrp">
+        <div class="left-block__wrp">
+            <section class="left-block">
+                <form action="#">
+                    <p class="search__title">Search the auction</p>
+                    <div class="search__wrp">
+                        <input class="search" placeholder="Search" type="search">
+                    </div>
+                    <div class="select-marg">
+                        <p class="select__title">Auction type</p>
+                        <div class="select_wrp">
+                            <select class="select" name="select-language">
+                                <option value="1">All types</option>
+                                <option selected value="2">English</option>
+                                <option value="3">Dutch</option>
+                                <option value="4">Priority English</option>
+                                <option value="5">Multiawards</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="hide-space">
+                        <div class="select-marg">
+                            <p class="select__title">Procedure type</p>
+                            <div class="select_wrp">
+                                <select class="select" name="select-type">
+                                    <option value="1">All types</option>
+                                    <option value="2">English</option>
+                                    <option value="3">Dutch</option>
+                                    <option value="4">Priority English</option>
+                                    <option value="5">Multiawards</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="select-marg">
+                            <p class="select__title">Status</p>
+                            <div class="select_wrp">
+                                <select class="select" name="select-status">
+                                    <option value="1">All statuses</option>
+                                    <option value="2">Planned</option>
+                                    <option value="3">Ongoing</option>
+                                    <option value="4">Finished</option>
+                                </select>
+                            </div>
+                        </div>
+                            <p  class="select-text">Starting date</p>
+                            <div class="select__items select-marg">
+                                <div class="select__up">
+                                    <input class="select select_pad date" type="date">
+                                </div>
+                                <span class="dash">–</span>
+                                <div class="select__down">
+                                    <input class="select select_pad date" type="date">
+                                </div>
+                            </div>
+                            <p class="select-text">Starting price, <span>UAH</span></p>
+                            <div class="select__items select-marg">
+                                <div class="select__up">
+                                    <input placeholder="0.00" class="select interval select_pad" type="number">
+                                </div>
+                                <span class="dash">–</span>
+                                <div class="select__down">
+                                    <input placeholder="0.00" class="select interval select_pad" type="number">
+                            </div>
+                            </div>
+                    </div>
+                    <div class="filter">
+                        <button class="filter__btn">
+                            <span class="filter__btn__hide">Hide filters</span>
+                            <span class="filter__btn__show">Show all filters</span>
+                        </button>
+                    </div>
+                    <div class="apply-wrp">
+                        <button class="apply">apply</button>
+                        <div class="reset-wrp">
+                            <button class="reset" type="reset">Reset all</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <div class="simulator__wrp">
+                <div class="simulator">
+                    <span class="simulator__title">To learn how the auctions work try our test auctions simulator.</span>
+                    <button class="blue__button">try the simulator</button>
+                </div>
+            </div>
+        </div>
+        <section class="right-block">
+            <div class="select-marg auction-sorting__wrp">
+                <p class="auction__title__800">Auctions listing</p>
+                <div class="auction-head">
+                    <p class="auctions-quantity__640px">45623 auctions</p>
+                    <p class="select__title select__title__auct">Sort</p>
+                </div>
+                <div class="select_wrp sorting">
+                    <select class="select" name="sort">
+                        <option value="1">No sorting</option>
                     </select>
                 </div>
-            </div>
-            <div class="select-marg">
-                <p class="select__title">Procedure type</p>
-                <div class="select_wrp">
-                    <select class="select" name="select-type">
-                        <option value="1">All types</option>
-                        <option value="2">English</option>
-                        <option value="3">Dutch</option>
-                        <option value="4">Priority English</option>
-                        <option value="5">Multiawards</option>
-                    </select>
+                <div class="header__wrp_right header__wrp_right__800px">
+                    <img class="header__img" src="./img/header_img.svg" alt="">
+                    <div class="lenguage">
+                        <button class="btn__leng ">
+                            <img src="./img/eng-flag.svg" alt="">
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="select-marg">
-                <p class="select__title">Status</p>
-                <div class="select_wrp">
-                    <select class="select" name="select-status">
-                        <option value="1">All statuses</option>
-                        <option value="2">Planned</option>
-                        <option value="3">Ongoing</option>
-                        <option value="4">Finished</option>
-                    </select>
+            <p class="auctions-quantity">45623 auctions</p>
+            <div class="auction__card-wraper">
+                <div class="auction auction__bkg">
+                    <p class="auction__title">Special subsoil use permit – Site № 2 of the Gryada deposit.</p>
+                    <p class="auction__id">UA-PS-2018-12-28-000007-3</p>
+                    <p class="auction__type">english</p>
+                    <div class="auction__prescription">
+                        <div class="auction-prescription__left">
+                            <p>Organizer:</p>
+                            <p>Start date:</p>
+                            <p>Starting price:</p>
+                        </div>
+                        <div class="auction__prescription__right">
+                            <p>Прозорі аукціони</p>
+                            <p>2021-01-01 <span>09:45:51</span></p>
+                            <p><span>UAH</span> 300'500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="auction">
+                    <p class="auction__title">Recycled metal raw materials (scrap of ferrous metals (scr...</p>
+                    <p class="auction__id">UA-PS-2018-12-28-000007-3</p>
+                    <p class="auction__type">Priority english</p>
+                    <div class="auction__prescription">
+                        <div class="auction-prescription__left">
+                            <p>Organizer:</p>
+                            <p>Start date:</p>
+                            <p>Starting price:</p>
+                        </div>
+                        <div class="auction__prescription__right">
+                            <p>Прозорі аукціони</p>
+                            <p>2021-01-01 <span>09:45:51</span></p>
+                            <p><span>UAH</span> 1'200'000.00 грн</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="auction auction__bkg">
+                    <p class="auction__title">Special subsoil use permit – Site № 2 of the Gryada deposit.</p>
+                    <p class="auction__id">UA-PS-2018-12-28-000007-3</p>
+                    <p class="auction__type">english</p>
+                    <div class="auction__prescription">
+                        <div class="auction-prescription__left">
+                            <p>Organizer:</p>
+                            <p>Start date:</p>
+                            <p>Starting price:</p>
+                        </div>
+                        <div class="auction__prescription__right">
+                            <p>Прозорі аукціони</p>
+                            <p>2021-01-01 <span>09:45:51</span></p>
+                            <p><span>UAH</span>UAH 300'500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="auction">
+                    <p class="auction__title">Recycled metal raw materials (scrap of ferrous metals (scr...</p>
+                    <p class="auction__id">UA-PS-2018-12-28-000007-3</p>
+                    <p class="auction__type">Priority english</p>
+                    <div class="auction__prescription">
+                        <div class="auction-prescription__left">
+                            <p>Organizer:</p>
+                            <p>Start date:</p>
+                            <p>Starting price:</p>
+                        </div>
+                        <div class="auction__prescription__right">
+                            <p>Прозорі аукціони</p>
+                            <p>2021-01-01 <span>09:45:51</span></p>
+                            <p><span>UAH</span> 1'200'000.00 грн</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="select-interval select-marg">
-                <p>Starting date</p>
-                <div class="select__up"></div>
-                    <input class="select select_pad" type="date">
-                </div>
-                <div class="select__down">
-                    <input class="select select_pad" type="date">
-                </div>
+            <div class="more-actions__wrp">
+                <button class="more-actions">show 10 more auctions</button>
             </div>
-            <div class="select-interval select-marg">
-                <p>Starting price, <span>UAH</span></p>
-                <div class="select__up">
-                    <input placeholder="0.00" class="select interval select_pad" type="number">
-                </div>
-                <div class="select__down">
-                    <input placeholder="0.00" class="select interval select_pad" type="number">
-                </div>
+            <div class="pages">
+                <button class="pages__item pages__item__left"><img src="./img/Arrow left blue.svg" alt="arrow-left"></button>
+                <ul class="pages__list">
+                    <li><button class="pages__item">1</button></li>
+                    <li><button class="pages__item">2</button></li>
+                    <li><button class="pages__item">3</button></li>
+                    <li><button class="pages__item pages__item__fore">4</button></li>
+                    <li><button class="pages__item pages__item__five-six">5</button></li>
+                    <li><button class="pages__item pages__item__five-six">6</button></li>
+                    <li><button class="pages__item pages__item__seven">7</button></li>
+                    <li><button class="pages__item">...</button></li>
+                    <li><button class="pages__item">282</button></li>
+                </ul>
+                <button class="pages__item pages__item__right"><img src="./img/Arrow right blue.svg" alt="arrow-right"></button>
             </div>
-            <p class="hide">Hide filters</p>
-            <button class="apply">apply</button>
-            <div class="reset_wrp">
-            <button class="reset" type="reset">Reset all</button>
-            </div>
-        </form>
-    </section>
+        </section>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
