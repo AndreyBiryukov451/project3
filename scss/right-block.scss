@@ -17,8 +17,26 @@
     margin: 10px 0;
 }
 
+.auctions-quantity__640px {
+    display: none;
+    color: var(--new-text-black, #333);
+    font-family: e-Ukraine;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 153.846% */
+}
+
 .auction {
     margin: 20px 0;
+}
+
+.header__wrp_right__800px {
+    display: none;
+}
+
+.auction__title__800 {
+    display: none;
 }
 
 .auction__bkg {
@@ -62,6 +80,10 @@
     margin-bottom: 24px;
 }
 
+.auction__card-wraper {
+    overflow: auto;
+}
+
 .auction__prescription {
     display: flex;
 }
@@ -103,6 +125,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    width: 100%;
     border-radius: 30px;
     border: 2px solid #6900EA;
     background-color: transparent;
@@ -114,18 +137,34 @@
     line-height: 16px; /* 114.286% */
     text-transform: uppercase;
     margin-bottom: 20px;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        border: 2px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(87deg, #6900E9 9.31%, #E5275F 49.66%, #F68A29 89.49%) border-box;
+    }
 }
 
 .pages {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 8px;
+        width: 100%;
+        justify-content: center;
+    }
 }
 
-.peges__item {
+.pages__item {
     width: 48px;
     height: 48px;
-    margin: 0 4px 5px;
+    margin: 0 2px;
     border: 2px solid #e5e5e5;
     background-color: transparent;
     border-radius: 15px;
@@ -136,13 +175,173 @@
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
+    box-sizing:border-box;
+
+    &__left {
+        order: 1;
+    }
+
+    &__right {
+        order: 2;
+    }
 
     &:hover {
-        border: 2px solid blue;
+        border-radius: 15px;
+        border: 2px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(87deg, #6900E9 9.31%, #E5275F 49.66%, #F68A29 89.49%) border-box;
         cursor: pointer;
     }
 
     &:focus {
-        border: 2px solid blue;
+        border-radius: 15px;
+        border: 2px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(87deg, #6900E9 9.31%, #E5275F 49.66%, #F68A29 89.49%) border-box;
+        outline: none;
+    }
+
+    &__fore,
+    &__five-six,
+    &__seven {
+        display: none;
+    }
+
+}
+
+@media (min-width: 360px) {
+    .right-block {
+        padding: 10px 20px 20px;
+    }
+
+    .pages__item__fore {
+        display: block;
+    }
+}
+
+@media (min-width: 640px) {
+    .right-block {
+        padding: 20px;
+        margin: 0 20px 20px;
+    }
+
+    .auctions-quantity {
+        display: none;
+    }
+
+    .auctions-quantity__640px {
+        display: flex;
+        max-width: 150px;
+    }
+
+    .auction-sorting__wrp {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sorting {
+        width: 50%;
+    }
+
+    .select__title__auct{
+        margin: 0 12px 0 0;
+    }
+    .auction-head {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .more-actions {
+        max-width: 264px;
+
+        &__wrp {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .pages {
+        flex-wrap: nowrap;
+
+        &__item__left {
+            order: 0;
+        }
+
+        &__item__five-six {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .right-block {
+        width: 69%;
+        margin: 0;
+    }
+
+    .auctions-quantity__640px {
+        display: none;
+    }
+
+    .auctions-quantity {
+        display: block;
+    }
+
+    .header__wrp_right__800px {
+        display: flex;
+    }
+
+    .auction-head {
+        display: none;
+    }
+
+    .auction__title__800 {
+        display: block;
+        color: var(--new-text-black, #333);
+    font-family: e-Ukraine;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px; /* 130% */
+    min-width: 170px;
+    margin-right: 20px;
+    }
+
+    .sorting {
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .action__none {
+        display: none;
+    }
+
+    .pages__item__five-six {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .auction-head {
+        display: block;
+        width: auto;
+    } 
+
+    .pages__item__five-six {
+        display: block;
+    }
+
+    .pages {
+        padding: 0 25px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .right-block {
+        width: 60%;
+    }
+
+    .pages__item__seven {
+        display: block;
     }
 }

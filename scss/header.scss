@@ -70,12 +70,14 @@
     }
 
     &:hover {
-        background: blue;
+        border: 2px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(87deg, #6900E9 9.31%, #E5275F 49.66%, #F68A29 89.49%) border-box;
         cursor: pointer;
     }
 
     &:focus {
-        background-color: blue;
+        border: 2px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(87deg, #6900E9 9.31%, #E5275F 49.66%, #F68A29 89.49%) border-box;
     }
 
     &:active {
@@ -101,13 +103,22 @@
     width: 48px;
     height: 24px;
     border: none;
-    background-color:#fff;
+    background-color: transparent;
     padding:  0;
     display: flex;
     align-items:center;
+    outline: none;
 
     &:after {
         content: url("../img/arrow down.svg");
+        width: 24px;
+        height: 24px;
+    }
+
+    &:hover,
+    &:focus {
+        border: 2px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(87deg, #6900E9 9.31%, #E5275F 49.66%, #F68A29 89.49%) border-box;
     }
 }
 
@@ -144,5 +155,11 @@
 
     .header__wrp_right {
         display: flex;
+    }
+}
+
+@media (min-width: 800px) {
+    .header {
+        display: none;
     }
 }

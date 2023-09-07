@@ -8,4 +8,28 @@
 
 body {
     background-image: linear-gradient(140deg, #340073 -0.39%, #422504 100.04%);
+    max-width: 1280px;
+    margin: 0 auto;
 }
+
+html,
+body {
+    height: 100%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+@media (min-width: 800px) {
+    .main__wrp {
+        display: flex;
+        padding: 20px;
+        height: 100%;
+    }
+}
+
+.main__wrp {
+    width: 100%;
+}
+
